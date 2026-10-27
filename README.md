@@ -45,7 +45,7 @@ Azure VNet (10.0.0.0/24)
 
 └── AppGatewaySubnet (10.0.0.128/27)
 
-![VNet](./Azure/Vnet/subnet.png)
+![VNet](./Azure/VNet/Subnet.png)
 
 Network Security Rules
 Azure VNet
@@ -137,7 +137,7 @@ Deployed five virtual machines across dedicated security zones to simulate a sma
 Security Design
 Management services are isolated within the MGMT1 subnet.
 
-![Virtual Machine](./Azure/Vnet/VM.png)
+![Virtual Machine](./Azure/VNet/VM.png)
 
 ## 3. Deploy Management Server and Access Portal
 
