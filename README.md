@@ -21,6 +21,10 @@ Internal Zone
 
 └── Future Security Services (Vault / Monitoring)
 
+Application Gateway Zone
+
+├── Application gateway with WAF installed
+
 Administrative access is centralized through a dedicated management subnet, while application and database workloads are isolated using subnet segmentation and Network Security Groups (NSGs).
 
 # Infrastructure Deployment Flow
@@ -33,6 +37,7 @@ Azure VNet (10.0.0.0/24)
 ├── DMZ1 (10.0.0.0/26)
 ├── MGMT1 (10.0.0.64/27)
 └── INT1 (10.0.0.96/27)
+└── AppGatewaySubnet (10.0.0.128/27)
 
 ![VNet](./Azure/VNet/Subnet.png)
 
@@ -52,8 +57,8 @@ MGMT1 (10.0.0.64/27)
 → TCP 3389 (RDP)
 
 ALLOW
-Internet
-→ TCP 443 (HTTPS)
+AppGatewaySubnet (10.0.0.128/27)
+→ TCP 80,443 (HTTPS)
 
 DENY
 All other inbound traffic
@@ -94,6 +99,20 @@ DMZ1 (10.0.0.0/26)
 DENY
 Internet
 → Any
+
+DENY
+All other inbound traffic
+
+--------------------------------------------------
+AppGatewaySubnet
+10.0.0.128/27
+--------------------------------------------------
+
+Inbound Rules
+
+ALLOW
+Public Internet 
+-> TCP 80,443 (HTTP, HTTPS)
 
 DENY
 All other inbound traffic
