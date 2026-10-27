@@ -45,7 +45,7 @@ Azure VNet (10.0.0.0/24)
 
 └── AppGatewaySubnet (10.0.0.128/27)
 
-![VNet](./azure/vnet/subnet.png)
+![VNet](./Azure/Vnet/subnet.png)
 
 Network Security Rules
 Azure VNet
