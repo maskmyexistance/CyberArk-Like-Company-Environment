@@ -35,11 +35,14 @@ Created an Azure Virtual Network with three security zones:
 Azure VNet (10.0.0.0/24)
  
 ├── DMZ1 (10.0.0.0/26)
+
 ├── MGMT1 (10.0.0.64/27)
+
 └── INT1 (10.0.0.96/27)
+
 └── AppGatewaySubnet (10.0.0.128/27)
 
-![VNet](./Azure/VNet/Subnet.png)
+![VNet](azure\vnet\subnet.png)
 
 Network Security Rules
 Azure VNet
@@ -182,13 +185,13 @@ This management server acts as a centralized administrative access platform, all
 
 ### Deployment Evidence
 
-![SSH into MGMT server](./Azure/MMGT-ZONE/ssh-into-guacamole-server.png)
+![SSH into MGMT server](azure\mmgtzone\ssh-into-guacamole-server.png)
 
-![Integrate docker compose file](./Azure/MMGT-ZONE/integrate-dockercomposefile.png)
+![Integrate docker compose file](azure\mmgtzone\integrate-dockercomposefile.png)
 
-![Guacamole Home Page](./Azure/MMGT-ZONE/HomePage.png)
+![Guacamole Home Page](azure\mmgtzone\HomePage.png)
 
-![MGMT VM](./Azure/MMGT-ZONE/boundary-worker.png)
+![MGMT VM](azure\mmgtzone\boundary-worker.png)
 
 ## 4. User Acceptance Testing (UAT)
 
@@ -207,11 +210,11 @@ To simulate vendor enviroment, I have created a group named QAaccess, where test
 
 ### Test Result
 
-![UAT-1](./UAT/UAT1.png)
+![UAT-1](UAT\UAT1.png)
 
-![UAT-2](./UAT/UAT2.png)
+![UAT-2](UAT\UAT2.png)
 
-![UAT-3](./UAT/UAT3.png)
+![UAT-3](UAT\UAT3.png)
 
 ### Outcome
 
