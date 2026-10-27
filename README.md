@@ -137,7 +137,7 @@ Deployed five virtual machines across dedicated security zones to simulate a sma
 Security Design
 Management services are isolated within the MGMT1 subnet.
 
-![Virtual Machine](./Azure/VNet/VM.png)
+![Virtual Machine](./Azure/Vnet/VM.png)
 
 ## 3. Deploy Management Server and Access Portal
 
@@ -188,13 +188,13 @@ This management server acts as a centralized administrative access platform, all
 
 ### Deployment Evidence
 
-![SSH into MGMT server](./azure/mmgtzone/ssh-into-guacamole-server.png)
+![SSH into MGMT server](./Azure/mmgtzone/ssh-into-guacamole-server.png)
 
-![Integrate docker compose file](./azure/mmgtzone/integrate-dockercomposefile.png)
+![Integrate docker compose file](./Azure/mmgtzone/integrate-dockercomposefile.png)
 
-![Guacamole Home Page](./azure/mmgtzone/HomePage.png)
+![Guacamole Home Page](./Azure/mmgtzone/HomePage.png)
 
-![MGMT VM](./azure/mmgtzone/boundary-worker.png)
+![MGMT VM](./Azure/mmgtzone/boundary-worker.png)
 
 ## 4. User Acceptance Testing (UAT)
 
